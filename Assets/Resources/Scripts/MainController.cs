@@ -6,7 +6,7 @@ public class MainController : MonoBehaviour {
 	
 	void Start () 
 	{
-		ControllerInstantiator (new string[] {"AudioController"});
+		ControllerInstantiator (new string[] {"AudioController", "UIController", "LevelController"});
 	}
 
 
@@ -14,7 +14,7 @@ public class MainController : MonoBehaviour {
 	{
 		foreach(string controller in controllers)
 		{
-			Debug.Log (controller);
+
 			/* Instantiate the controllers */
 			GameObject iController = (GameObject)Instantiate (Resources.Load ("Prefabs/Controllers/" + controller));
 
