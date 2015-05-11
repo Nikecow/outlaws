@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 
-
 public class MenuScript : MonoBehaviour 
 {
 
@@ -26,13 +25,34 @@ public class MenuScript : MonoBehaviour
 	private GameObject selectedButton;
 	public List<GameObject> menuLift = new List<GameObject>();
 	private bool firstStart;
-    
+
+	/* Version Number */
+	public Text version;
 
 	void Start () 
 	{
 		/* Disable the menus at start, if not already */
 		DisableSubMenusAtStart ();
+		VersionNumber ();
     }
+
+
+	/* Update the version number from the text file */
+	void VersionNumber()
+	{
+		version = GameObject.Find ("Version").GetComponent<Text> ();
+		string versionNumber = System.IO.File.ReadAllText ("VERSION.txt");
+		Debug.Log ("Version: " + versionNumber);
+		version.text = versionNumber;
+	}
+
+
+	/* Main Menu Buttons */
+
+	public void PressStart () 
+	{
+		Application.LoadLevel (1);
+	}
 
 	void DisableSubMenusAtStart()
 	{
@@ -47,12 +67,6 @@ public class MenuScript : MonoBehaviour
 		}
 	}
 
-	/* Main Menu Buttons */
-
-	public void PressStart () 
-	{
-		Application.LoadLevel (1);
-	}
 
     
     /* Exit Menu Buttons */

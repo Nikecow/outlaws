@@ -579,7 +579,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 298547900}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aa79f23618784f19b93ff4779657628, type: 3}
+  m_Script: {fileID: 11500000, guid: 79e6d7eb987324f1f9f49bc5f92be069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &298547902
@@ -1160,6 +1160,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 251384718}
   optionsDoneButton: {fileID: 1908493796}
   menuLift: []
+  version: {fileID: 0}
 --- !u!225 &879390911
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1464,6 +1465,7 @@ GameObject:
   - 222: {fileID: 1467395832}
   - 114: {fileID: 1467395831}
   - 114: {fileID: 1467395830}
+  - 23: {fileID: 1467395833}
   m_Layer: 5
   m_Name: Version
   m_TagString: Untagged
@@ -1525,14 +1527,38 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: v0.1
+    m_LineSpacing: 1.13
+  m_Text: Version
 --- !u!222 &1467395832
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1467395828}
+--- !u!23 &1467395833
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1467395828}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
 --- !u!1 &1561826960
 GameObject:
   m_ObjectHideFlags: 0
