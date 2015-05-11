@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12323, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Button
+  m_EditorClassIdentifier: 
+  m_Presets:
+  - m_Name: Title
+    m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
+  - m_Name: Button
+    m_Color: {r: .545098066, g: .270588249, b: .0784313753, a: 1}
+  - m_Name: Subtext
+    m_Color: {r: .551470578, g: .425052166, b: .336559236, a: 1}
+  - m_Name: Highlight
+    m_Color: {r: .360294104, g: .148356408, b: 0, a: 1}
+  - m_Name: Pressed
+    m_Color: {r: 0, g: 0, b: 0, a: 1}
+  - m_Name: Disabled
+    m_Color: {r: .463235319, g: .463235319, b: .463235319, a: 1}
