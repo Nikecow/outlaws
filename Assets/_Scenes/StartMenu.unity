@@ -1250,33 +1250,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22462988, guid: 10df48affa87c4bd99c8185851dd492d,
     type: 2}
   m_PrefabInternal: {fileID: 100411651}
---- !u!1 &1159846975
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1159846976}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1159846976
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1159846975}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 189.631866, y: 101.175629, z: 3.27487183}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
 --- !u!224 &1296003196 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22465202, guid: 4f81e30322cee418f9bd72296c9894f4,
