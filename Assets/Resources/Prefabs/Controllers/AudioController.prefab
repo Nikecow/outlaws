@@ -39,6 +39,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5506dea9e5b064098910fcf4f203e805, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSounds: []
+  musicSounds:
+  - {fileID: 8300000, guid: a6abbf33b874b98458333ae2e7a4cf38, type: 3}
+  ambientSounds: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -5,12 +5,13 @@ using System.Collections;
 public class UIController : MonoBehaviour {
 
 	/* Version Number */
-	public Text versionButtonText;
-	public TextAsset versionFile;
+	private Text versionButtonText, versionButtonTextGit;
+	public TextAsset versionFile, versionFileGit;
 	
 	void Start () 
 	{
 		VersionNumber ();
+		VersionNumberGit ();
 	}
 
 	void Update () {
@@ -23,7 +24,14 @@ public class UIController : MonoBehaviour {
 		versionButtonText = GameObject.Find ("Version").GetComponent<Text> ();
 		versionFile = Resources.Load("VERSION") as TextAsset;
 		string versionNumber = versionFile.text;
-		Debug.Log ("Version: " + versionNumber);
-		versionButtonText.text = versionNumber;
+		versionButtonText.text = "v " + versionNumber;
+	}
+	
+		void VersionNumberGit()
+	{
+		versionButtonTextGit = GameObject.Find ("VersionGit").GetComponent<Text> ();
+		versionFileGit = Resources.Load("VERSION-GIT") as TextAsset;
+		string versionNumber = versionFileGit.text;
+		versionButtonTextGit.text = "Commit: " + versionNumber;
 	}
 }

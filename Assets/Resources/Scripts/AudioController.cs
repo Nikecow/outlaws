@@ -1,29 +1,24 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class AudioController : MonoBehaviour {
 
 	/* Create an audio, ambient and music source */
-	private AudioSource audioSource;
-	private AudioSource ambientSource;
-	private AudioSource musicSource;
-
-	/* Create an array with the music */
-	public SoundFiles[] audioSource, musicSounds, ambientSounds;
-
-	[System.Serializable]
-	public class SoundFiles {
-		private AudioClip[] audioSounds;
-		private AudioClip[] ambientSounds;
-		private AudioClip[] musicSounds;
-	}
-
-	private AudioClip result;
+	private AudioSource audioSource, ambientSource, musicSource;
+	
+	/* Create arrays with the sounds for the sources, serialize it so it is visible in the editor */
+	[SerializeField]
+	private AudioClip[] audioSounds, musicSounds, ambientSounds;
 
 	void Start () 
 	{
+		CreateSources();
+	}
+	
+	internal void CreateSources()
+	{
 		audioSource = (AudioSource)gameObject.AddComponent <AudioSource>();
-		musicSource = (AudioSource)gameObject.AddComponent <AudioSource>();
+ 		musicSource = (AudioSource)gameObject.AddComponent <AudioSource>();
+		ambientSource = (AudioSource)gameObject.AddComponent <AudioSource>();
 	}
 	
 	void Update () {
@@ -32,18 +27,18 @@ public class AudioController : MonoBehaviour {
 
 	internal void PlayMusic (string music)
 	{
-		//SoundFiles musicSounds = new SoundFiles();
-		//musicSounds.musicSounds
+		/* Declare the AudioClip variable null so it may be used locally(!) */
+		AudioClip result = null;
 		float soundVolume = 0;
 		
 		switch (music) 
 		{
 		case "menu":
-//			result = musicSounds.musicSounds[0];
-			soundVolume = 0.2f; 
+			result = musicSounds[0];
+			soundVolume = 1.0f; 
 			break;
 		}
-//		musicSource.PlayOneShot (result, soundVolume);
+		musicSource.PlayOneShot (result, soundVolume);
 	}
 	
 	internal void StopMusic () 

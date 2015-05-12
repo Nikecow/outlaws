@@ -3,7 +3,6 @@ using System.Collections;
 
 public class MainController : MonoBehaviour {
 
-	
 	void Start () 
 	{
 		ControllerInstantiator (new string[] {"AudioController", "UIController", "LevelController"});
@@ -15,7 +14,7 @@ public class MainController : MonoBehaviour {
 		foreach(string controller in controllers)
 		{
 
-			/* Instantiate the controllers */
+			/* Instantiate the controllers */ 
 			GameObject iController = (GameObject)Instantiate (Resources.Load ("Prefabs/Controllers/" + controller));
 
 			/* Name the object properly */
