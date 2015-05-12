@@ -9,10 +9,11 @@ public class AudioController : MonoBehaviour {
 	private AudioSource musicSource;
 
 	/* Create an array with the music */
-	public SoundFiles[] musicSounds, ambientSounds;
+	public SoundFiles[] audioSource, musicSounds, ambientSounds;
 
 	[System.Serializable]
 	public class SoundFiles {
+		private AudioClip[] audioSounds;
 		private AudioClip[] ambientSounds;
 		private AudioClip[] musicSounds;
 	}
