@@ -30,6 +30,7 @@ public class MenuController : MonoBehaviour
 
 	/* Add an interface of the audio controller */
 	private AudioController ac;
+	private	bool hasPlayed;
 	
 	void Start () 
 	{
@@ -38,16 +39,24 @@ public class MenuController : MonoBehaviour
 
 		/* Disable the leave game button at start */
 		LeaveGameButtonToggle ();
-
-		ac = GameObject.Find ("AudioController").GetComponent<AudioController> ();
-		ac.PlayMusic("Menu");
-
-
+		
+		/* Define the object of the audio controller */
+		ac = GameObject.Find("AudioController").GetComponent<AudioController>();
     }
 
 	void Update ()
 	{
 		EscapeToggle ();
+		PlayOnStartMenuMusic();
+	}
+	
+	void PlayOnStartMenuMusic()
+	{
+		if(!hasPlayed)
+		{
+		 ac.PlayMusic("menu");
+		 hasPlayed = true;
+		}
 	}
 
 	/* Play Menu Button */
@@ -70,9 +79,6 @@ public class MenuController : MonoBehaviour
 				playText.text = "Resume";
 			else
 				playText.text = "play";
-
-			Debug.Log (playText);
-
 	}
     
     /* Exit Menu and leave game Buttons */
