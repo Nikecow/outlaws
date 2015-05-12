@@ -27,6 +27,9 @@ public class MenuController : MonoBehaviour
 	public List<GameObject> menuLift = new List<GameObject>();
 	private bool firstStart;
 	private bool isExitButton;
+
+	/* Add an interface of the audio controller */
+	private AudioController ac;
 	
 	void Start () 
 	{
@@ -35,6 +38,10 @@ public class MenuController : MonoBehaviour
 
 		/* Disable the leave game button at start */
 		LeaveGameButtonToggle ();
+
+		ac = GameObject.Find ("AudioController").GetComponent<AudioController> ();
+		ac.PlayMusic("Menu");
+
 
     }
 
