@@ -18,8 +18,6 @@ public class AudioController : MonoBehaviour {
 		private AudioClip[] musicSounds;
 	}
 
-
-
 	private AudioClip result;
 
 	void Start () 
