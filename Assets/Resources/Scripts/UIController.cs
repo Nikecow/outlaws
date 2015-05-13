@@ -29,7 +29,7 @@ public class UIController : MonoBehaviour {
 		versionButtonText = GameObject.Find ("Version").GetComponent<Text> ();
 		versionFile = Resources.Load("VERSION") as TextAsset;
 		string versionNumber = versionFile.text;
-		versionButtonText.text = "v" + versionNumber;
+		versionButtonText.text = "Version: " + versionNumber;
 	}
 	
 	/* Set the commit number, made by git commits to the VERSION-GIT.txt file*/

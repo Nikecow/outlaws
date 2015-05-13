@@ -1,31 +1,32 @@
-40ee800\t- 2015-05-13 - Nikecow - Fix changelog formatting
-faf6347\t- 2015-05-13 - Nikecow - Make git changelog
-506f8ce\t- 2015-05-13 - Nikecow - Added changelog menu
-61ceeed\t- 2015-05-13 - Nikecow - Bump to v0.1.4
-c0c6a8a\t- 2015-05-13 - Nikecow - Working about menu
-636dcb0\t- 2015-05-13 - Nikecow - Fixed IDE errors
-97b5949\t- 2015-05-13 - Nikecow - Merge branch 'master' of github.com:Nikecow/Outlaws
-8174dfd\t- 2015-05-13 - Nikecow - test
-43a61aa\t- 2015-05-13 - Nikecow - Remove unused directives
-8286e47\t- 2015-05-13 - Nikecow - Merge branch 'master' of github.com:Nikecow/Outlaws
-45cdec4\t- 2015-05-13 - Nikecow - Working git versioning
-c0a4df4\t- 2015-05-13 - Nikecow - test3
-e237124\t- 2015-05-13 - Nikecow - Working audio interface
-2b250ea\t- 2015-05-12 - Nikecow - Test 2
-f861a37\t- 2015-05-12 - Nikecow - Test the Visual Studio Git
-4121e77\t- 2015-05-12 - Nikecow - Small
-9454612\t- 2015-05-12 - Nikecow - resync
-1cc84e3\t- 2015-05-12 - Nikecow - Revert "Revert "Working FPSController""
-89c5f46\t- 2015-05-12 - Nikecow - Revert "Working FPSController"
-ced6a18\t- 2015-05-12 - Nikecow - Working FPSController
-8171767\t- 2015-05-12 - Nikecow - Version 0.1.2
-dc0f769\t- 2015-05-11 - Nikecow - Update .gitignore
-570e371\t- 2015-05-11 - Nikecow - Update .gitignore
-7223e3f\t- 2015-05-11 - Nikecow - Update .gitignore
-b951072\t- 2015-05-11 - Nikecow - Update .gitignore
-b07e282\t- 2015-05-11 - Nikecow - Update .gitignore
-6bb20f9\t- 2015-05-11 - Nikecow - Update
-1b37c4d\t- 2015-05-11 - Nikecow - Revert "TestCommit"
-55a80a1\t- 2015-05-11 - Nikecow - TestCommit
-a24bb6b\t- 2015-05-11 - Nikecow - First Init
-cbd6e2c\t- 2015-05-11 - Nikecow - First commit
+25e8193 \t-  2015-05-13 - Nikecow - Fix space
+40ee800 \t-  2015-05-13 - Nikecow - Fix changelog formatting
+faf6347 \t-  2015-05-13 - Nikecow - Make git changelog
+506f8ce\t - 2015-05-13 - Nikecow - Added changelog menu
+61ceeed\t - 2015-05-13 - Nikecow - Bump to v0.1.4
+c0c6a8a\t - 2015-05-13 - Nikecow - Working about menu
+636dcb0\t - 2015-05-13 - Nikecow - Fixed IDE errors
+97b5949\t - 2015-05-13 - Nikecow - Merge branch 'master' of github.com:Nikecow/Outlaws
+8174dfd\t - 2015-05-13 - Nikecow - test
+43a61aa\t - 2015-05-13 - Nikecow - Remove unused directives
+8286e47\t - 2015-05-13 - Nikecow - Merge branch 'master' of github.com:Nikecow/Outlaws
+45cdec4\t - 2015-05-13 - Nikecow - Working git versioning
+c0a4df4\t - 2015-05-13 - Nikecow - test3
+e237124\t - 2015-05-13 - Nikecow - Working audio interface
+2b250ea\t - 2015-05-12 - Nikecow - Test 2
+f861a37\t - 2015-05-12 - Nikecow - Test the Visual Studio Git
+4121e77\t - 2015-05-12 - Nikecow - Small
+9454612\t - 2015-05-12 - Nikecow - resync
+1cc84e3\t - 2015-05-12 - Nikecow - Revert "Revert "Working FPSController""
+89c5f46\t - 2015-05-12 - Nikecow - Revert "Working FPSController"
+ced6a18\t - 2015-05-12 - Nikecow - Working FPSController
+8171767\t - 2015-05-12 - Nikecow - Version 0.1.2
+dc0f769\t - 2015-05-11 - Nikecow - Update .gitignore
+570e371\t - 2015-05-11 - Nikecow - Update .gitignore
+7223e3f\t - 2015-05-11 - Nikecow - Update .gitignore
+b951072\t - 2015-05-11 - Nikecow - Update .gitignore
+b07e282\t - 2015-05-11 - Nikecow - Update .gitignore
+6bb20f9\t - 2015-05-11 - Nikecow - Update
+1b37c4d\t - 2015-05-11 - Nikecow - Revert "TestCommit"
+55a80a1\t - 2015-05-11 - Nikecow - TestCommit
+a24bb6b\t - 2015-05-11 - Nikecow - First Init
+cbd6e2c\t - 2015-05-11 - Nikecow - First commit
