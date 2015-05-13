@@ -49,7 +49,7 @@ public class UIController : MonoBehaviour {
 		changelogText = GameObject.Find ("ChangelogText").GetComponent<Text> ();
 		changelogFile = Resources.Load("CHANGELOG") as TextAsset;
 		string changeLog = changelogFile.text;
-				string changeLogFixed = changeLog.Replace("\\t", "\t");
+		string changeLogFixed = changeLog.Replace("\\t", "\t");
 		changelogText.text = changeLogFixed;
 	}
 	
