@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour {
 
 	/* Version Number */
-	private static Text versionButtonText, versionButtonGitText;
-	private static TextAsset versionFile, versionFileGit;
+	private static Text versionButtonText, versionButtonGitText, changelogText;
+	private static TextAsset versionFile, versionGitFile, changelogFile;
 	private static bool isSet;
 	
 	void Start () 
@@ -18,12 +18,9 @@ public class UIController : MonoBehaviour {
 		{
 		VersionNumber ();
 		VersionNumberGit ();
+		Changelog ();
 		isSet = true;
 		}
-	}
-
-	void Update () {
-	
 	}
 
 	/* Set the version number from the text file */
@@ -39,10 +36,20 @@ public class UIController : MonoBehaviour {
 	private static void VersionNumberGit()
 	{
 		versionButtonGitText = GameObject.Find ("VersionGit").GetComponent<Text> ();
-		versionFileGit = Resources.Load("VERSION-GIT") as TextAsset;
-		string gitNumber = versionFileGit.text;
+		versionGitFile = Resources.Load("VERSION-GIT") as TextAsset;
+		string gitNumber = versionGitFile.text;
 		/* Remove the new line from the string */
 		string gitNumberFixed = gitNumber.Replace("\r", "").Replace("\n", "");
 		versionButtonGitText.text = "Commit: " + gitNumberFixed;
 	}
+	
+	/* Set the changelog, made by git commits to the CHANGELOG.md5 file*/
+	private static void Changelog()
+	{
+		changelogText = GameObject.Find ("ChangelogText").GetComponent<Text> ();
+		changelogFile = Resources.Load("CHANGELOG") as TextAsset;
+		string changeLog = changelogFile.text;
+		changelogText.text = changeLog;
+	}
+	
 }
