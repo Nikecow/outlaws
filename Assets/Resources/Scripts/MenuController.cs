@@ -173,12 +173,12 @@ public class MenuController : MonoBehaviour
 				break;
 			/* Select the Exit menu */
 			case "MainExit":
-			case "No":
+			case "OptionsNo":
 				selectedButton = menuList[1]; 
 				break;
 				
 			/* Select the About menu */
-			case "About":
+			case "MainAbout":
 			case "AboutDone":
 				selectedButton = menuList[2]; 
 				break;
