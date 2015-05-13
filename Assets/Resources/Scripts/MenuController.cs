@@ -5,24 +5,25 @@ using UnityEngine.UI;
 public class MenuController : MonoBehaviour 
 {
 
-	/* Main Menu Objects */
+	/* Main Menu objects and buttons */
     public Button mainPlayButton;
+	public Button mainLeaveButton;
 	public Button mainOptionsButton;
 	public Button mainExitButton;
-	public static GameObject mainLeaveButton;
+	public static GameObject mainLeaveButtonObject;
 
-	/* Quit Menu Objects */
+	/* Quit Menu objects and buttons */
 	public GameObject quitMenu;
 	public Button quitYesButton;
 	public Button quitNoButton;
 
-	/* Options Menu Objects */
+	/* Options Menuobjects and buttons */
 	public GameObject optionsMenu;
 	public Button optionsDoneButton;
 
 	/* Variables for the button handlers */
 	private GameObject selectedButton;
-	public List<GameObject> menuLift = new List<GameObject>();
+	public List<GameObject> menuList = new List<GameObject>();
 	private bool firstStart;
 	private bool isExitButton;
 
@@ -38,7 +39,7 @@ public class MenuController : MonoBehaviour
 		/* Disable the leave game button at start */
 		LeaveGameButtonToggle ();
 		
-		/* Define the object of the audio controller */
+		/* Refer the AudioController Object */
 		ac = GameObject.Find("AudioController").GetComponent<AudioController>();
     }
 
@@ -108,21 +109,22 @@ public class MenuController : MonoBehaviour
 	public static void LeaveGameButtonToggle()
 	{
 		/* Only select if the object is null */
-		if (!mainLeaveButton)
-			mainLeaveButton = GameObject.Find ("Leave");
+		if (!mainLeaveButtonObject)
+			mainLeaveButtonObject = GameObject.Find ("Leave");
 
 		/* Toggle menu botton, don't disable when still in a game */
-		if (mainLeaveButton.activeSelf && !LevelController.isInGame)
-			mainLeaveButton.SetActive (false);
+		if (mainLeaveButtonObject.activeSelf && !LevelController.isInGame)
+			mainLeaveButtonObject.SetActive (false);
 		else
-			mainLeaveButton.SetActive(true);
+			mainLeaveButtonObject.SetActive(true);
 		
 	}
 	
 	/* Menu and button handlers  */
 
 	/* ButtonHandler
-	 * gets passed the name of the clicked button upon Onclick */
+	 * gets passed the name of the clicked button upon Onclick 
+	 */
 	public void ButtonHandler (string clickedButton = "")
 	{
 		ButtonDefiner (clickedButton);
@@ -130,41 +132,44 @@ public class MenuController : MonoBehaviour
 	}
 
 	/* ButtonDefiner 
-	 * determines what menu should be toggled after a button is clicked and add the menus to the list */
+	 * determines what menu should be toggled after a button is clicked and add the menus to the list 
+	 * Add the objects for menu toggling here!
+	 */
 	void ButtonDefiner(string clickedButton = "")
 	{
 
 		/* Select the Exit button if required by ToggleQuitMenu */
 		if(isExitButton)
-			selectedButton = menuLift[1]; 
+			selectedButton = menuList[1]; 
 
 		/* Select the menus here based on the string passed upon Button onClick() */
 			if(firstStart)
 			{
 			/* Add the menus to a list on firstStart */
-			menuLift.Add(optionsMenu);
-			menuLift.Add(quitMenu);
+			menuList.Add(optionsMenu);
+			menuList.Add(quitMenu);
 			} else {
 			switch (clickedButton) 
 			{
 			/* Select the options menu */
 			case "MainOptions":
 			case "OptionsDone":
-				selectedButton = menuLift[0]; 
+				selectedButton = menuList[0]; 
 				break;
 			/* Select the Exit menu */
 			case "MainExit":
 			case "No":
-				selectedButton = menuLift[1]; 
+				selectedButton = menuList[1]; 
 				break;
 			}
 		}
 	}
 
-	/* Menu togglers  */
+	/* Menu and button togglers */
 	
 	/* EscapeToggle
-	 * if the game is paused, return to game, else open exit menu */
+	 * if the game is paused, return to game, else open exit menu 
+	 */
 	void EscapeToggle()
 	{
 		if (Input.GetKeyDown (KeyCode.Escape)) 
@@ -192,16 +197,20 @@ public class MenuController : MonoBehaviour
 		}
 	}
 
-	/* Toggle interactable of the main menu */
+	/* Toggle interactable of the main menu 
+	 * Add buttons which need to be toggled here
+ 	 */
 	void ToggleMainMenuInteractable (bool turnOn = false)
 	{
 		if (mainPlayButton.IsInteractable() && !turnOn)
 		{
 			mainPlayButton.interactable = false;
+			mainLeaveButton.interactable = false;
 			mainOptionsButton.interactable = false;
 			mainExitButton.interactable = false;
 		} else {
 			mainPlayButton.interactable = true;
+			mainLeaveButton.interactable = true;
 			mainOptionsButton.interactable = true;
 			mainExitButton.interactable = true;
 		}
@@ -210,12 +219,13 @@ public class MenuController : MonoBehaviour
 	void DisableSubMenusAtStart()
 	{
 		/* First get a list of all the menus at ButtonDefiner 
-		* use the bool here instead of at the ButtonDefiner because of max 1 parameter for onClick */
+		* use the bool here instead of at the ButtonDefiner because of max 1 parameter for onClick 
+		*/
 		firstStart = true;
 		ButtonDefiner ();
 		firstStart = false;
 		
-		foreach (GameObject menu in menuLift)
+		foreach (GameObject menu in menuList)
 		{
 			MenuToggler (menu, true);
 		}

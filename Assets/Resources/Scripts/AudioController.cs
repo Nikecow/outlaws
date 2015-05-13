@@ -3,11 +3,15 @@
 public class AudioController : MonoBehaviour {
 
 	/* Create an audio, ambient and music source */
-	private AudioSource audioSource, ambientSource, musicSource;
+	private AudioSource audioSource;
+	private AudioSource ambientSource;
+	private AudioSource musicSource;
 	
 	/* Create arrays with the sounds for the sources, serialize it so it is visible in the editor */
-	[SerializeField]
-	private AudioClip[] audioSounds, musicSounds, ambientSounds;
+	
+	[SerializeField] private AudioClip[] audioSounds;
+	[SerializeField] private AudioClip[] musicSounds;
+	[SerializeField] private AudioClip[] ambientSounds;
 
 	void Start () 
 	{
