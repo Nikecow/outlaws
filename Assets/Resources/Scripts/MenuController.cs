@@ -1,8 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
-using System.Collections;
-using System.Collections.Generic;
 
 public class MenuController : MonoBehaviour 
 {
@@ -54,7 +52,7 @@ public class MenuController : MonoBehaviour
 	{
 		if(!hasPlayed)
 		{
-		 ac.PlayMusic("menu");
+		 ac.PlaySound("menu");
 		 hasPlayed = true;
 		}
 	}

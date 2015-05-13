@@ -25,20 +25,27 @@ public class AudioController : MonoBehaviour {
 	
 	}
 
-	internal void PlayMusic (string music)
+	internal void PlaySound (string sound)
 	{
 		/* Declare the AudioClip variable null so it may be used locally(!) */
-		AudioClip result = null;
-		float soundVolume = 0;
+		AudioSource source = null;
+		//float soundVolume = 0;
 		
-		switch (music) 
+		/* Select the proper audio source and audio clip */
+		switch (sound) 
 		{
 		case "menu":
-			result = musicSounds[0];
-			soundVolume = 1.0f; 
+			//soundVolume = 1.0f; 
+			source = musicSource;
+			source.clip = musicSounds[0];
+			break;
+		case "desert":
+			//soundVolume = 1.0f; 
+			source = ambientSource;
+			source.clip = ambientSounds[0];
 			break;
 		}
-		musicSource.PlayOneShot (result, soundVolume);
+		source.Play ();
 	}
 	
 	internal void StopMusic () 

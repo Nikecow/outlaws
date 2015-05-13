@@ -12,7 +12,7 @@ GameObject:
   - 136: {fileID: 13690624}
   - 114: {fileID: 11469612}
   m_Layer: 0
-  m_Name: RigidBodyFPSController
+  m_Name: PlayerFPS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

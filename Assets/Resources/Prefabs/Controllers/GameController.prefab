@@ -8,9 +8,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 446738}
-  - 114: {fileID: 11458164}
+  - 114: {fileID: 11453240}
   m_Layer: 0
-  m_Name: AudioController
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11458164
+--- !u!114 &11453240
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -36,15 +36,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 187372}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5506dea9e5b064098910fcf4f203e805, type: 3}
+  m_Script: {fileID: 11500000, guid: 8780cb895ab9c42e589ad90f2cb240db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSounds: []
-  musicSounds:
-  - {fileID: 8300000, guid: a6abbf33b874b98458333ae2e7a4cf38, type: 3}
-  ambientSounds:
-  - {fileID: 8300000, guid: 32a563a32a351ee479e1937dedfbb17c, type: 3}
-  - {fileID: 8300000, guid: 739f44571370dce459a5eff093eeb17e, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

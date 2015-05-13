@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class MainController : MonoBehaviour {
 
 	void Start () 
 	{
-		ControllerInstantiator (new string[] {"AudioController", "UIController", "LevelController"});
+		ControllerInstantiator (new string[] {"AudioController", "UIController", "LevelController", "GameController"});
 	}
 
 
