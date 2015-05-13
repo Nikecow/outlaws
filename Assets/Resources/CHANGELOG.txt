@@ -1,1 +1,30 @@
-0.1.4
+faf6347\t- 2015-05-13 - Nikecow - Make git changelog
+506f8ce\t- 2015-05-13 - Nikecow - Added changelog menu
+61ceeed\t\t2015-05-13\t\tNikecow\tBump to v0.1.4
+c0c6a8a\t\t2015-05-13\t\tNikecow\tWorking about menu
+636dcb0\t\t2015-05-13\t\tNikecow\tFixed IDE errors
+97b5949\t\t2015-05-13\t\tNikecow\tMerge branch 'master' of github.com:Nikecow/Outlaws
+8174dfd\t\t2015-05-13\t\tNikecow\ttest
+43a61aa\t\t2015-05-13\t\tNikecow\tRemove unused directives
+8286e47\t\t2015-05-13\t\tNikecow\tMerge branch 'master' of github.com:Nikecow/Outlaws
+45cdec4\t\t2015-05-13\t\tNikecow\tWorking git versioning
+c0a4df4\t\t2015-05-13\t\tNikecow\ttest3
+e237124\t\t2015-05-13\t\tNikecow\tWorking audio interface
+2b250ea\t\t2015-05-12\t\tNikecow\tTest 2
+f861a37\t\t2015-05-12\t\tNikecow\tTest the Visual Studio Git
+4121e77\t\t2015-05-12\t\tNikecow\tSmall
+9454612\t\t2015-05-12\t\tNikecow\tresync
+1cc84e3\t\t2015-05-12\t\tNikecow\tRevert "Revert "Working FPSController""
+89c5f46\t\t2015-05-12\t\tNikecow\tRevert "Working FPSController"
+ced6a18\t\t2015-05-12\t\tNikecow\tWorking FPSController
+8171767\t\t2015-05-12\t\tNikecow\tVersion 0.1.2
+dc0f769\t\t2015-05-11\t\tNikecow\tUpdate .gitignore
+570e371\t\t2015-05-11\t\tNikecow\tUpdate .gitignore
+7223e3f\t\t2015-05-11\t\tNikecow\tUpdate .gitignore
+b951072\t\t2015-05-11\t\tNikecow\tUpdate .gitignore
+b07e282\t\t2015-05-11\t\tNikecow\tUpdate .gitignore
+6bb20f9\t\t2015-05-11\t\tNikecow\tUpdate
+1b37c4d\t\t2015-05-11\t\tNikecow\tRevert "TestCommit"
+55a80a1\t\t2015-05-11\t\tNikecow\tTestCommit
+a24bb6b\t\t2015-05-11\t\tNikecow\tFirst Init
+cbd6e2c\t\t2015-05-11\t\tNikecow\tFirst commit
