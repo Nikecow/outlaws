@@ -1,3 +1,4 @@
+513d9f0 \t-  2015-05-14 - Nikecow - Fixed some anchors and tweaked about menu
 0bc648e \t-  2015-05-14 - Nikecow - Add blur for background menu
 48bbc46 \t-  2015-05-13 - Nikecow - Changed the main menu and logo
 8a8a3fe \t-  2015-05-13 - Nikecow - Cleanup about menu even more
