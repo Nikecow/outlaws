@@ -1,3 +1,4 @@
+48bbc46 \t-  2015-05-13 - Nikecow - Changed the main menu and logo
 8a8a3fe \t-  2015-05-13 - Nikecow - Cleanup about menu even more
 fc2ec5f \t-  2015-05-13 - Nikecow - Cleanup changelog formatting
 25e8193 \t-  2015-05-13 - Nikecow - Fix space
