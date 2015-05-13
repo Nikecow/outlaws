@@ -47,6 +47,11 @@ public class AudioController : MonoBehaviour {
 			//soundVolume = 1.0f; 
 			source = ambientSource;
 			source.clip = ambientSounds[0];
+			break;	
+		case "placeholder":
+			//soundVolume = 1.0f; 
+			source = audioSource;
+			source.clip = audioSounds[0];
 			break;
 		}
 		source.Play ();

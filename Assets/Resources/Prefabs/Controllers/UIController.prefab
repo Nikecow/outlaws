@@ -39,8 +39,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea799961e58d644f9ab17e74bad142d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  versionButtonText: {fileID: 0}
-  versionFile: {fileID: 0}
+  versionFile: {fileID: 4900000, guid: 636c4c2b492704c9da2df181d533599f, type: 3}
+  versionFileGit: {fileID: 4900000, guid: e80e693b10d554e17895db12741cf1c8, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

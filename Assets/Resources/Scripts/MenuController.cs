@@ -17,13 +17,18 @@ public class MenuController : MonoBehaviour
 	public Button quitYesButton;
 	public Button quitNoButton;
 
-	/* Options Menuobjects and buttons */
+	/* Options Menu objects and buttons */
 	public GameObject optionsMenu;
 	public Button optionsDoneButton;
+	
+	/* About Menu objects and buttons */
+	public Button aboutButton;
+	public GameObject aboutMenu;
+	public Button aboutDoneButton;
 
 	/* Variables for the button handlers */
 	private GameObject selectedButton;
-	public List<GameObject> menuList = new List<GameObject>();
+	private List<GameObject> menuList = new List<GameObject>();
 	private bool firstStart;
 	private bool isExitButton;
 
@@ -58,7 +63,7 @@ public class MenuController : MonoBehaviour
 		}
 	}
 
-	/* Play Menu Button */
+	/* Main Menu Play Button */
 	
 	public void PressPlay () 
 	{
@@ -86,7 +91,16 @@ public class MenuController : MonoBehaviour
 	{
 		Application.Quit ();
 	}
-
+	
+	/* About Menu Button
+	 * Add this so the text of the about menu can be updated firt before opening
+	 */
+	public void PressAbout (string clickedButton) 
+	{
+		ButtonHandler(clickedButton);
+		UIController.UpdateVersions();
+	}
+	
 	/* Simulate a click on the exit button */
 	void ToggleQuitMenu ()
 	{
@@ -148,6 +162,7 @@ public class MenuController : MonoBehaviour
 			/* Add the menus to a list on firstStart */
 			menuList.Add(optionsMenu);
 			menuList.Add(quitMenu);
+			menuList.Add(aboutMenu);
 			} else {
 			switch (clickedButton) 
 			{
@@ -160,6 +175,12 @@ public class MenuController : MonoBehaviour
 			case "MainExit":
 			case "No":
 				selectedButton = menuList[1]; 
+				break;
+				
+			/* Select the About menu */
+			case "About":
+			case "AboutDone":
+				selectedButton = menuList[2]; 
 				break;
 			}
 		}

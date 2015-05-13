@@ -4,13 +4,22 @@ using UnityEngine.UI;
 public class UIController : MonoBehaviour {
 
 	/* Version Number */
-	private Text versionButtonText, versionButtonTextGit;
-	public TextAsset versionFile, versionFileGit;
+	private static Text versionButtonText, versionButtonGitText;
+	private static TextAsset versionFile, versionFileGit;
+	private static bool isSet;
 	
 	void Start () 
 	{
+	}
+	
+	public static void UpdateVersions()
+	{	
+		if(!isSet)
+		{
 		VersionNumber ();
 		VersionNumberGit ();
+		isSet = true;
+		}
 	}
 
 	void Update () {
@@ -18,7 +27,7 @@ public class UIController : MonoBehaviour {
 	}
 
 	/* Set the version number from the text file */
-	void VersionNumber()
+	private static void VersionNumber()
 	{
 		versionButtonText = GameObject.Find ("Version").GetComponent<Text> ();
 		versionFile = Resources.Load("VERSION") as TextAsset;
@@ -27,13 +36,13 @@ public class UIController : MonoBehaviour {
 	}
 	
 	/* Set the commit number, made by git commits to the VERSION-GIT.txt file*/
-		void VersionNumberGit()
+	private static void VersionNumberGit()
 	{
-		versionButtonTextGit = GameObject.Find ("VersionGit").GetComponent<Text> ();
+		versionButtonGitText = GameObject.Find ("VersionGit").GetComponent<Text> ();
 		versionFileGit = Resources.Load("VERSION-GIT") as TextAsset;
 		string gitNumber = versionFileGit.text;
 		/* Remove the new line from the string */
 		string gitNumberFixed = gitNumber.Replace("\r", "").Replace("\n", "");
-		versionButtonTextGit.text = "Commit: " + gitNumberFixed;
+		versionButtonGitText.text = "Commit: " + gitNumberFixed;
 	}
 }
