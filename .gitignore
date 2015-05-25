@@ -28,6 +28,9 @@ obj/
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
 
+# prune commmit script
+prunecommit.sh
+
 # ============ #
 # OS generated #
 # ============ #
