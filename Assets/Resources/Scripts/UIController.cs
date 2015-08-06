@@ -1,13 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class UIController : MonoBehaviour {
 
 	/* Version Number */
-	private static Text versionButtonText, versionButtonGitText, changelogText;
-	private static TextAsset versionFile, versionGitFile, changelogFile;
+	private static Text text;
+	private static TextAsset versionFile;
 	private static bool isSet;
-	
+
 	void Start () 
 	{
 	}
@@ -16,42 +17,51 @@ public class UIController : MonoBehaviour {
 	{	
 		if(!isSet)
 		{
+		VersionNumberUnity ();
 		VersionNumber ();
 		VersionNumberGit ();
 		Changelog ();
 		isSet = true;
 		}
 	}
+	
+	/* Set the version number from the text file */
+	private static void VersionNumberUnity()
+	{
+		text = GameObject.Find ("VersionUnity").GetComponent<Text> ();
+		string unityNumber = Application.version;
+		text.text = "Unity: " + unityNumber;
+	}
 
 	/* Set the version number from the text file */
 	private static void VersionNumber()
 	{
-		versionButtonText = GameObject.Find ("Version").GetComponent<Text> ();
-		versionFile = Resources.Load("VERSION") as TextAsset;
+		text = GameObject.Find ("Version").GetComponent<Text> ();
+		versionFile = Resources.Load("About/VERSION") as TextAsset;
 		string versionNumber = versionFile.text;
-		versionButtonText.text = "Version: " + versionNumber;
+		text.text = "Version: " + versionNumber;
 	}
 	
 	/* Set the commit number, made by git commits to the VERSION-GIT.txt file*/
 	private static void VersionNumberGit()
 	{
-		versionButtonGitText = GameObject.Find ("VersionGit").GetComponent<Text> ();
-		versionGitFile = Resources.Load("VERSION-GIT") as TextAsset;
-		string gitNumber = versionGitFile.text;
+		text = GameObject.Find ("VersionGit").GetComponent<Text> ();
+		versionFile = Resources.Load("About/VERSION-GIT") as TextAsset;
+		string gitNumber = versionFile.text;
 		/* Remove the new line from the string */
 		string gitNumberFixed = gitNumber.Replace("\r", "").Replace("\n", "");
-		versionButtonGitText.text = "Commit: " + gitNumberFixed;
+		text.text = "Commit: " + gitNumberFixed;
 	}
 	
 	/* Set the changelog, made by git commits to the CHANGELOG.md5 file*/
 	private static void Changelog()
 	{
-		changelogText = GameObject.Find ("ChangelogText").GetComponent<Text> ();
-		changelogFile = Resources.Load("CHANGELOG") as TextAsset;
-		string changeLog = changelogFile.text;
+		text = GameObject.Find ("ChangelogText").GetComponent<Text> ();
+		versionFile = Resources.Load("About/CHANGELOG") as TextAsset;
+		string changeLog = versionFile.text;
 		/* Fix the formatting of the changelog output */
 		string changeLogFixed = changeLog.Replace("\\t", "\t").Replace("\\n", "\n");
-		changelogText.text = changeLogFixed;
+		text.text = changeLogFixed;
 	}
 	
 }
