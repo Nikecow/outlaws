@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class MenuTogglers : MonoBehaviour {
 
@@ -26,7 +25,6 @@ public class MenuTogglers : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		Debug.Log("Gestart!");
 		//mB = GameObject.Find ("Sound").GetComponent<Button> ();
 		//  yourCurrentTexture = texture1;
 		FullScreenPress (true);

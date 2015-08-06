@@ -6,6 +6,8 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Aa]ssets/[Pp]acks/
+/[Aa]ssets/[Pp]refabs/3D/
+/[Aa]ssets/[Mm]edia/
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
