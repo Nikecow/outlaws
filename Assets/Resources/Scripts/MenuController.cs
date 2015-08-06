@@ -92,6 +92,13 @@ public class MenuController : MonoBehaviour
 		Application.Quit ();
 	}
 	
+	public void PressFullScreen () 
+	{
+		MenuTogglers mt;
+		mt = GameObject.Find("FullscreenButton").GetComponent<MenuTogglers>();
+		mt.FullScreenPress();
+	}
+	
 	/* About Menu Button
 	 * Add this so the text of the about menu can be updated firt before opening
 	 */

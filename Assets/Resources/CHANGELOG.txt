@@ -1,4 +1,5 @@
-e455ff5 \t-  2015-05-25 - Fixed standard assets issues\n
+abae86d \t-  2015-05-25 - added prunecommit to gitignore\n
+4607dcd \t-  2015-05-25 - Fixed some issues with standard assets\n
 c6d341a \t-  2015-05-14 - Add an newline after each commit in changelog\n
 9c21fe1 \t-  2015-05-14 - Changelog text will now be wrapped, also removed author\n
 1249b27 \t-  2015-05-14 - Overhauled the other menus and bumped version\n

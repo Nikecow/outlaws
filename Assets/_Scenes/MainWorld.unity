@@ -4462,7 +4462,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443502, guid: 68f041ca866b8480fa5cb04c4e6b14b0, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -.958807826
       objectReference: {fileID: 0}
     - target: {fileID: 443502, guid: 68f041ca866b8480fa5cb04c4e6b14b0, type: 2}
       propertyPath: m_LocalRotation.z
@@ -4470,7 +4470,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 443502, guid: 68f041ca866b8480fa5cb04c4e6b14b0, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: .28405568
       objectReference: {fileID: 0}
     - target: {fileID: 443502, guid: 68f041ca866b8480fa5cb04c4e6b14b0, type: 2}
       propertyPath: m_RootOrder
