@@ -4,7 +4,6 @@ using System.IO;
 
 public class UIController : MonoBehaviour {
 
-	/* Version Number */
 	private static Text text;
 	private static TextAsset versionFile;
 	private static bool isSet;
@@ -24,12 +23,13 @@ public class UIController : MonoBehaviour {
 		isSet = true;
 		}
 	}
+
 	
-	/* Set the version number from the text file */
+	/* Set the version number of the client and editor */
 	private static void VersionNumberUnity()
 	{
 		text = GameObject.Find ("VersionUnity").GetComponent<Text> ();
-		string unityNumber = Application.version;
+		string unityNumber = (Application.unityVersion + " (" + Application.version +")");
 		text.text = "Unity: " + unityNumber;
 	}
 

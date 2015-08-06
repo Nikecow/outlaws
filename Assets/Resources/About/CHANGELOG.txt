@@ -1,3 +1,4 @@
+1d6cc1d \t-  2015-08-06 - Added Unity version to about menu\n
 7df3a40 \t-  2015-08-06 - Added fullscreen button to options\n
 abae86d \t-  2015-05-25 - added prunecommit to gitignore\n
 4607dcd \t-  2015-05-25 - Fixed some issues with standard assets\n
