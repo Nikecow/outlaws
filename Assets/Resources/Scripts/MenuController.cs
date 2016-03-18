@@ -24,7 +24,6 @@ public class MenuController : MonoBehaviour
 	/* About Menu objects and buttons */
 	public Button aboutButton;
 	public GameObject aboutMenu;
-	public Button aboutDoneButton;
 
 	/* Variables for the button handlers */
 	private GameObject selectedButton;
