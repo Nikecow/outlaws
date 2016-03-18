@@ -1,3 +1,4 @@
+cdab3ce \t-  2016-03-18 - Updated Unity to 5.4, compiled to webgl\n
 a742b79 \t-  2015-08-07 - Added gallows to the word\n
 ace3ab1 \t-  2015-08-06 - Bumped version to 0.1.6\n
 c00453f \t-  2015-08-06 - Fixed unity editor version in about menu\n
